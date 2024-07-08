@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "371462385364",
+    "project_id": "entregadegas-de488",
+    "storage_bucket": "entregadegas-de488.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371462385364:android:f45986ebec617068ba9541",
+        "android_client_info": {
+          "package_name": "com.example.entregadegas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI-1G2x2ALQwTMqc9a6Rc0cUcsV1SFRJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
