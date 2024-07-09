@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -9,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.entregadegas"
-        minSdk = 21
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -42,6 +45,30 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    //Glide
+    implementation(libs.glide)
+    ksp(libs.compiler)
+
+    //Circular Image
+    implementation(libs.circleimageview)
+
+    //Dagger Hilt
+    implementation(libs.dagger.hilt)
+    implementation(libs.hilt.android.gradle.plugin)
+    ksp(libs.hilt.compiler)
+
+    //Navigation Component
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+
+    //Firebase
+    implementation(libs.firebase.auth)
+
+    //Coroutines with Firebase
+    implementation(libs.kotlinx.coroutines.play.services)
+
+    //Tests
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
