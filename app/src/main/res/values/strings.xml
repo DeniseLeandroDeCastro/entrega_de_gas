@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">EntregaDeGas</string>
+    <string name="app_name">Entrega de Gás</string>
+    <string name="the_right_address">O endereço certo para fazer compras a qualquer hora</string>
+    <string name="quality">Agora ficou muito fácil pedir seu botijão de gás ou garrafão de água.</string>
+    <string name="text_btn_start">Iniciar</string>
 </resources>
