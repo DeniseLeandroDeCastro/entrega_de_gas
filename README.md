@@ -4,6 +4,6 @@
 
 # Entrega da Gás
 
-<p>Aplicativo é uma loja virtual de entrega de gás e garrafão de água mineral.</p>
-  
+<img src="https://github.com/user-attachments/assets/f578a334-91b6-40e1-907f-744e262cd8d9" width="200" height="200"/>
+
 </div>
