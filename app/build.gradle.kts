@@ -1,9 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.dagger.hilt)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.dagger.hilt.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -36,14 +37,25 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
-
+    //Android Core
     implementation(libs.androidx.core.ktx)
+
+    //Android App Compat
     implementation(libs.androidx.appcompat)
+
+    //Material
     implementation(libs.material)
+
+    //Android Activity
     implementation(libs.androidx.activity)
+
+    //Android Constraint Layout
     implementation(libs.androidx.constraintlayout)
 
     //Glide
@@ -52,11 +64,6 @@ dependencies {
 
     //Circular Image
     implementation(libs.circleimageview)
-
-    //Dagger Hilt
-    implementation(libs.dagger.hilt)
-    implementation(libs.hilt.android.gradle.plugin)
-    ksp(libs.hilt.compiler)
 
     //Navigation Component
     implementation(libs.androidx.navigation.fragment.ktx)
@@ -67,6 +74,10 @@ dependencies {
 
     //Coroutines with Firebase
     implementation(libs.kotlinx.coroutines.play.services)
+
+    //Dagger Hilt
+    implementation(libs.dagger.hilt.android)
+    ksp(libs.hilt.compiler)
 
     //Tests
     testImplementation(libs.junit)

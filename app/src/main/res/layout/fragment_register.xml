@@ -1,6 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="24dp">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/circle" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView8"
+                    app:layout_constraintStart_toStartOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="@+id/imageView8"
+                    app:srcCompat="@drawable/gas" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="162dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/text_create_account"
+                    android:textColor="#673AB7"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="@+id/imageView8" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_background"
+                android:layout_margin="24dp"
+                android:padding="32dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFirstNameRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_first_name"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/editFirstNameRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/smallButtonHeight"
+                    android:textSize="16sp"
+                    android:background="@drawable/edittext_border_background"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:hint="@string/edit_text_first_name" />
+
+                <TextView
+                    android:id="@+id/tvtLastNameRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/tv_last_name"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editLastNameRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/smallButtonHeight"
+                    android:textSize="16sp"
+                    android:background="@drawable/edittext_border_background"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:hint="@string/edit_text_last_name" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/tv_seu_email"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editEmailRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/smallButtonHeight"
+                    android:textSize="16sp"
+                    android:background="@drawable/edittext_border_background"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:hint="@string/edit_text_email" />
+
+                <TextView
+                    android:id="@+id/textViewPasswordRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/tv_password"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editPasswordRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/smallButtonHeight"
+                    android:textSize="16sp"
+                    android:background="@drawable/edittext_border_background"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:hint="@string/edit_text_password" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonRegisterRegister"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/smallButtonHeight"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                android:background="@drawable/gradient_background"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="12dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:textAllCaps="false"
+                android:text="@string/text_btn_register"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

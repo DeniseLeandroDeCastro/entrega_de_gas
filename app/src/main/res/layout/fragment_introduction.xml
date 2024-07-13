@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background_introduction">
+    android:layout_height="match_parent">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,33 +18,21 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="700dp"
+                android:layout_height="600dp"
                 android:layout_margin="16dp"
-                android:background="@drawable/intro_top_background">
+                android:background="@drawable/gradient_background">
 
                 <ImageView
                     android:id="@+id/ellipse"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintStart_toStartOf="@+id/guidelineEllipseLeft"
-                    app:layout_constraintEnd_toEndOf="@id/guidelineEllipseRight"
-                    app:layout_constraintTop_toTopOf="@id/guidelineEllipseTop"
+                    android:layout_width="283dp"
+                    android:layout_height="280dp"
+                    android:src="@drawable/gas"
                     app:layout_constraintBottom_toBottomOf="@id/guidelineEllipseBottom"
-                    android:src="@drawable/gas"/>
-
-                <TextView
-                    android:id="@+id/tvRightAddressForShopping"
-                    style="@style/h4"
-                    android:layout_width="254dp"
-                    android:layout_height="130dp"
-                    android:text="@string/the_right_address"
-                    android:textAlignment="center"
-                    android:textSize="22sp"
-                    app:layout_constraintBottom_toTopOf="@+id/imageView5"
-                    app:layout_constraintEnd_toEndOf="@id/ellipse"
-                    app:layout_constraintStart_toStartOf="@id/ellipse"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.06999999" />
+                    app:layout_constraintEnd_toEndOf="@id/guidelineEllipseRight"
+                    app:layout_constraintHorizontal_bias="0.484"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineEllipseLeft"
+                    app:layout_constraintTop_toTopOf="@id/guidelineEllipseTop"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -56,16 +45,19 @@
                     app:srcCompat="@drawable/circle_orange" />
 
                 <TextView
-                    android:id="@+id/tvQuality"
-                    style="@style/h2"
-                    android:textColor="@color/white"
+                    android:id="@+id/tvRightAddressForShopping"
+                    style="@style/h4"
+                    android:layout_width="245dp"
+                    android:layout_height="116dp"
+                    android:text="@string/the_right_address"
                     android:textAlignment="center"
-                    android:layout_width="262dp"
-                    android:layout_height="99dp"
-                    android:text="@string/quality"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/imageView3" />
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@id/ellipse"
+                    app:layout_constraintHorizontal_bias="0.488"
+                    app:layout_constraintStart_toStartOf="@id/ellipse"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -75,6 +67,22 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="@drawable/circle_orange2" />
+
+
+                <TextView
+                    android:id="@+id/tvQuality"
+                    style="@style/h2"
+                    android:layout_width="259dp"
+                    android:layout_height="84dp"
+                    android:text="@string/quality"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRightAddressForShopping"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guidelineEllipseLeft"
@@ -97,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.19" />
+                    app:layout_constraintGuide_percent="0.04" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guidelineEllipseBottom"
@@ -105,19 +113,21 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layout_constraintGuide_percent="0.52" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnStart"
-                    android:layout_width="@dimen/smallButtonWidth"
-                    android:layout_height="@dimen/smallButtonHeight"
-                    android:layout_marginBottom="32dp"
-                    android:backgroundTint="@color/g_dark_blue"
-                    app:cornerRadius="10dp"
-                    android:text="@string/text_btn_start"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonStartIntroduction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/smallButtonHeight"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                android:background="@drawable/gradient_background"
+                android:layout_margin="24dp"
+                style="android:@style/Widget.Button"
+                android:textAllCaps="false"
+                android:text="@string/text_btn_start"
+                android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
